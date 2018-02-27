@@ -8,9 +8,7 @@ angular.module('tempratures', [])
       $scope.trueTemps=[];
       $scope.currentTemp = -1;
     $scope.eci = 'N33w82RX3rSmWtqF1f6pFb';
-    $scope.addTiming = function() {
-        var pURL = bURL + "?number=" + $scope.number + "&name=" + $scope.name;
-      console.log(pURL);
+    $scope.update = function() {
        return $http({
           url: 'http://pico.kristophermiles.pagekite.me/sky/event/N33w82RX3rSmWtqF1f6pFb/61659830140/sensor/profile_updated',
           method: "POST",
